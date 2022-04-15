@@ -8,9 +8,9 @@
 *{
     background-color: lightpink;
     text-align: center;
-    margin: 3px;
-    padding: 0;
-    margin-top: 7px;
+    margin: 2px;
+    padding: 1px;
+    margin-top: 1px;
 }
 
 body{
@@ -18,9 +18,10 @@ body{
     background-image: url(./imagescoder/chupetin.jpeg);
     background-repeat: initial;
     background-position: center;
-    background-size: auto;
+    background-size: 10px;
     background-attachment: fixed;
 }
+
 
 dl{
     color: darkred;
@@ -31,7 +32,7 @@ dl{
     color:black
 }
 
-.BordesRedondeados{
+.img-fluid{
     border: solid 5px black;
     border-radius: 20px;
 }
@@ -57,7 +58,7 @@ a{
     text-align: center;
     color:black
 }
-#E{
+#E {
     text-align: left;
 }
 
@@ -73,7 +74,7 @@ a{
     align-items: center;
     justify-content: center;
 
-    background-color: white;
+    background-color: black;
     border-radius: 4px;
     transition: 0.3s ease-in-out;
 
@@ -98,32 +99,37 @@ grid-auto-flow: dense;
 
 
 .navbar .menu{
+    
     display: flex;
     justify-content: space-around;
     grid-column: 4/7;
+
 }
 
 .navbar .menu li{
     list-style: none;
 }
 
-.navbar .derechos {
-text-decoration-color: white;
-transition: all 3s;
-}
-
-
 
 .navbar .menu a{
     text-decoration: none;
     color: black;
     cursor: pointer;
+    background-image: linear-gradient(pink, white);
 }
+
+.novedades :hover {
+    transform: scale(1.5);
+background-color: white;
+}
+
+
+
 
 
 /*Main*/
 
-.principal .elbuenvendedor{
+.principal .elbuenvendedor {
     grid-column:7/10;
     grid-row: 3/6;
     color: #fff;
@@ -131,12 +137,13 @@ transition: all 3s;
 
 .elbuenvendedor {
     line-height: 50px;
+
 }
 
 /*footer*/
 .piedepagina{
     display: grid;
-    height: 80px;
+    height: 60px;
     align-items: center;
     color: white;
     
@@ -196,7 +203,7 @@ transition: all 3s;
 
 
 .chupetin {
-    
+
     0%{
         transform: translateX(0px);
     }
@@ -209,10 +216,10 @@ transition: all 3s;
     }
 } 
 
-.Logo2{
+.Logo2 :hover {
     
-    width: 60px;
-    height: 60px;
+    width: 10px;
+    height: 10px;
     grid-column: 2/3;
     animation-name: Logo;
     animation-iteration-count: infinite;
@@ -225,10 +232,10 @@ transition: all 3s;
 @keyframes Logo {
     display: inline-block;
     margin: 0 0.5rem;
-  
+
     animation: bounce;
     animation-duration: 5s; 
-  }
+}
 
 
 
@@ -272,6 +279,4 @@ transition: all 3s;
         justify-content: space-around;
 
     }
-
-    
 }
