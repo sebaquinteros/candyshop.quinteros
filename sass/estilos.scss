@@ -1,0 +1,297 @@
+//anidacion o nesting
+
+@font-face {
+    font-family: 'cambo';
+    src: url('/letras/Cambo-Regular.ttf');
+}
+
+
+
+*{
+    background-color: lightpink;
+    text-align: center;
+    margin: 2px;
+    padding: 1px;
+    margin-top: 1px;
+}
+
+body{
+    text-align: center;
+    background-image: url(./imagescoder/chupetin.jpeg);
+    background-repeat: initial;
+    background-position: center;
+    background-size: 10px;
+    background-attachment: fixed;
+}
+
+
+dl{
+    color: darkred;
+    font-family: 'cambo';
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    color:black
+}
+
+.img-fluid{
+    border: solid 5px black;
+    border-radius: 20px;
+}
+
+
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+.D{
+    color: white;
+    background-color: black;
+}
+
+#encabezados{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    color:black
+}
+#E {
+    text-align: left;
+}
+
+
+.grid-conteiner {
+    background-color: brown;
+    font-size: 3rem;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.grid-item:hover {
+    filter:opacity(0.9);
+    transform: scale(1.04);
+    
+}
+
+.grid-container{
+display: grid;
+grid-template-columns: auto auto auto;
+grid-auto-rows: minmax(200px, auto);
+gap: 10px;
+padding: 10px;
+grid-auto-flow: dense;
+}
+//import
+@import "colores";
+import "tarjetas"
+// variables
+$color-fondo: rgb(255, 255, 255);
+$color-fuentes: #F2DECE;
+$tipografia-base: arial, sans-serif;
+$size-fuentes: 25px;
+// anidacion o nesting
+.navbar {
+.menu{
+    
+    display: flex;
+    justify-content: space-around;
+    grid-column: 4/7;
+
+}
+}
+.navbar .menu li{
+    list-style: none;
+}
+
+
+.navbar .menu a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    background-image: linear-gradient(pink, white);
+}
+
+.novedades :hover {
+    transform: scale(1.5);
+background-color: white;
+}
+
+
+
+
+
+/*Main*/
+
+.principal .elbuenvendedor {
+    grid-column:7/10;
+    grid-row: 3/6;
+    color: #fff;
+}
+
+.elbuenvendedor {
+    line-height: 50px;
+
+}
+
+/*footer*/
+.piedepagina{
+    display: grid;
+    height: 60px;
+    align-items: center;
+    color: white;
+    
+}
+
+.chupetin {
+
+    0%{
+        transform: translateX(0px);
+    }
+
+    50%{
+        transform: rotateX(180deg)
+    }
+    100%{
+        transform: rotateX(360deg)
+    }
+} 
+
+.Logo2 :hover {
+    
+    width: 10px;
+    height: 10px;
+    grid-column: 2/3;
+    animation-name: Logo;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+
+}
+
+@keyframes Logo {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce;
+    animation-duration: 5s; 
+}
+
+
+/*Mediaqueries*/
+@media screen and (max-width:576px) {
+    .navbar{
+        position: relative;
+    }
+
+    .navbar .menu{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /*main*/
+    .principal{
+        grid-column: 8/11;
+        grid-row: 3/7;
+        margin-right: 10px;
+    }
+
+    .principal h1{
+        font-size: 25px;
+    }
+
+    .principal p{
+        font-size: 14px;
+    }
+
+    .principal{
+        font-size: 10px;
+        font-weight: 900;
+        color: yellow;
+        text-transform: uppercase;
+        background: black;
+        border: solid 1px yellow;
+    }
+
+    /*footer*/
+
+    .piedepagina{
+        height: 110px;
+    }
+
+    .piedepagina{
+        display: none;
+    }
+
+    .piedepagina{
+        font-size: 15px;
+    }  
+}
+
+
+@media (min-width:575px) and (max-width:900px){
+    .navbar{
+        position: relative;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .navbar .menu{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .navbar .menu{
+        display: none;
+    }
+
+}
+
+@media (min-width:767px) and (max-width:1024px){
+    .navbar{
+        position: relative;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar{
+        grid-column: 4/8;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-around;
+
+    }
+}
+
+/*// Large  (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { .navbar }
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { .navbar }
