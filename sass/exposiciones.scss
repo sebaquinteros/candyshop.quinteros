@@ -1,0 +1,37 @@
+/*Declaracion de variables */
+$espaciado-card: 20px auto;
+$relleno-card: 25px $fondo-tarjeta : #FADC6B;
+
+$color-title: ##F2DECD .tarjeta_expo {
+    width: 50%;
+
+}
+
+/*extend*/
+.tarjeta_ubicacion {
+    @extend .tarjeta_biografia
+}
+
+$paleta: ('primario': white,
+    'secundario': black,
+    'success': yellow,
+
+);
+
+/*maps*/
+li {
+    background-color: map-get($map: $paleta, $skey: 'primario');
+    color: map-get($map: $paleta, $skey: 'secundario');
+}
+
+/*mixin*/
+
+@mixin Bordes ($color, $shadow) {
+    border: solid 1px white;
+    border-radius: 8px;
+    box-shadow: 0px 0px $size $shadow
+}
+
+.video {
+    @include Bordes(black)
+}

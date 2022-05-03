@@ -1,10 +1,10 @@
-$color-titulo-card: #F2DECE
-$espacio-card: 10px auto;
+$color-titulo-card: #F2DECE $espacio-card: 10px auto;
 $tipografia-card: 'poppins',
 sans-serif;
+
 //declaracion de variables
 .principal .elbuenvendedor {
-    grid-column:7/10;
+    grid-column: 7/10;
     grid-row: 3/6;
     color: #fff;
 
